@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Exports Darlo",
+    "subtitle": "Goods, £ million GBP | Source: ONS through ECO API",
+    "fontSize": "14",
+    "subtitleFontSize": "12",
+    "color": "#000000",
+    "subtitleColor": "#000000"
+  },
+  "height": "250",
+  "width": "320",
+  "background": "#ffffff",
+  "view": {
+    "fill": "#ffffff"
+  },
+  "data": {
+    "url": "https://api.economicsobservatory.com/gbr/expo?vega",
+    "format": {
+      "type": "json"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "color": "#f4134d",
+    "strokeWidth": "2"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": "My X label",
+        "titleColor": "#122B39"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {
+        "title": "Darlington",
+        "titleColor": "#122B39"
+      }
+    }
+  }
+}
+
