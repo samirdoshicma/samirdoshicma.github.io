@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html>
 
-<!-- Richard Davies, Data Science -->
+<!-- Richard Davies, Data Science-->
 <!-- Economics Observatory, Data Science for Public Policy -->
 
-<!-- Commenting you code is vital, vital, vital -->
-<!-- This is how you add comments to HTML -->
 
-<!-- You can also include
-multi - line comments
-if you find that useful -->
-
-<!-- To comment something out, use the short-cut CTRL & the "/" key -->
-
-<!-- HTML files have two fundamental parts. (1) The head, (2) The body -->
-
-<!-- The head contains things that you do not see on the page -->
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 <head>
-    <title>Page Title</title>
+  <!--The next three lines allow the Vega embed-->
+  <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
 </head>
 
-<!-- The body contains thigs you see -->
-<!-- Most elements both open and close, with the content in the middle -->
-<!-- Indenting is optional, but helps with readability -->
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+
+
+<!-- ///////////////////  START BODY //////////////////////////////////// -->
+
 <body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
+
+<!--Chart 1 -->
+  <div class="chart" id="chart1">
+      <script>
+        var myChart1 = "chart1_covidUKRegions.json";
+        vegaEmbed('#chart1', myChart1);
+      </script>
+  </div>
+
+<!--Chart 2 -->
+<div class="chart" id="chart2">
+    <script>
+      var myChart2 = "chart2_ukProductivity.json";
+      vegaEmbed('#chart2', myChart2);
+    </script>
+</div>
+
+
 </body>
+<!-- ///////////////////  END BODY //////////////////////////////////// -->
+
 </html>
