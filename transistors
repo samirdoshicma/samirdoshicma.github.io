@@ -1,0 +1,12 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "data": {"url": "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/data/datasets/50_years_of_chips.csv"},
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal"},
+    "y": {"field": "Transistor", "type": "quantitative"},
+    "color": {"field": "Designer Country", "type": "nominal"}
+  }
+}
+
